@@ -10,7 +10,7 @@ class Contacts:
 
     def menu(self):
         print('1) View Contacts')
-        print('2) View Contacts')
-        print('3) View Contacts')
-        print('4) View Contacts')
-        print('5) View Contacts')
+        print('2) Add Contact')
+        print('3) Delete Contact')
+        print('4) Print')
+        print('5) Exit')
