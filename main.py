@@ -6,4 +6,4 @@ class Contacts:
         print('  Contact List  ')
         print('================')
         print('please make a selection')
-        
+        user_input = input()
