@@ -8,4 +8,4 @@ class Contacts:
         print('please make a selection')
         user_input = input()
 
-    def menu
+    def menu(self)
