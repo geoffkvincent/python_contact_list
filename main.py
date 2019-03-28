@@ -14,3 +14,11 @@ class Contacts:
         print('3) Delete Contact')
         print('4) Print')
         print('5) Exit')
+
+    def view(self):
+    
+    def add(self):
+
+    def delete(self):
+
+    
