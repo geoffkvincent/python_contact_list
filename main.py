@@ -7,3 +7,5 @@ class Contacts:
         print('================')
         print('please make a selection')
         user_input = input()
+
+    def menu
