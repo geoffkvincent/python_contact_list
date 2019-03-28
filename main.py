@@ -15,10 +15,14 @@ class Contacts:
         print('4) Print')
         print('5) Exit')
 
+    def menu_switch(self)
+
     def view(self):
     
     def add(self):
 
     def delete(self):
 
-    
+    def print_contacts(self):
+
+    def 
