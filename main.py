@@ -9,4 +9,4 @@ class Contacts:
         user_input = input()
 
     def menu(self):
-        
+        print('1) View Contacts')
