@@ -20,7 +20,7 @@ class Contacts:
     def menu_switch(self, user_input)
         if user_input === 1:
             self.view()
-        elif (user_input === 2)
+        elif user_input === 2:
             self.add()
         elif (user_input === 3)
             self.delete_contact()
