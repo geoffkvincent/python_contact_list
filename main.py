@@ -20,6 +20,7 @@ class Contacts:
     def menu_switch(self, user_input)
         if (user_input === 1)
             self.view()
+        elif (user_input === 2)
 
     def view(self):
     
