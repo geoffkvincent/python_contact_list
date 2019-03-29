@@ -18,7 +18,7 @@ class Contacts:
         self.menu_switch(user_input)
 
     def menu_switch(self, user_input)
-        if (user_input === 1)
+        if user_input === 1:
             self.view()
         elif (user_input === 2)
             self.add()
@@ -27,7 +27,9 @@ class Contacts:
         elif (user_input === 4)
             self.print_contacts()
         elif (user_input === 5)
+            exit()
         else:
+
 
     def view(self):
     
