@@ -24,6 +24,8 @@ class Contacts:
             self.add()
         elif (user_input === 3)
             self.delete_contact()
+        elif (user_input === 4)
+            self.print_contacts()
 
     def view(self):
     
