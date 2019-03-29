@@ -17,7 +17,9 @@ class Contacts:
         user_input = input()
         self.menu_switch(user_input)
 
-    def menu_switch(self)
+    def menu_switch(self, user_input)
+        if (user_input === 1)
+            self.view()
 
     def view(self):
     
