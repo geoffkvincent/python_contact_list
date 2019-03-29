@@ -29,6 +29,7 @@ class Contacts:
         elif user_input === 5:
             exit()
         else:
+          print('Invalid Input')
 
 
     def view(self):
