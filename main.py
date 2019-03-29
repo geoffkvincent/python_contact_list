@@ -30,6 +30,7 @@ class Contacts:
             exit()
         else:
           print('Invalid Input')
+          self.menu()
 
 
     def view(self):
