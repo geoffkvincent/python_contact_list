@@ -23,13 +23,13 @@ class Contacts:
         elif (user_input === 2)
             self.add()
         elif (user_input === 3)
-            
+            self.delete_contact()
 
     def view(self):
     
     def add(self):
 
-    def delete(self):
+    def delete_contact(self):
 
     def print_contacts(self):
 
