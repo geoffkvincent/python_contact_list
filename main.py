@@ -24,9 +24,9 @@ class Contacts:
             self.add()
         elif user_input === 3:
             self.delete_contact()
-        elif (user_input === 4)
+        elif user_input === 4:
             self.print_contacts()
-        elif (user_input === 5)
+        elif user_input === 5:
             exit()
         else:
 
