@@ -21,6 +21,8 @@ class Contacts:
         if (user_input === 1)
             self.view()
         elif (user_input === 2)
+            self.add()
+        elif (u)
 
     def view(self):
     
