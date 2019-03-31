@@ -36,6 +36,8 @@ class Contacts:
     def view(self):
     
     def add(self):
+        first_name = input()
+        last_name = input()
 
     def delete_contact(self):
 
