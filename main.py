@@ -36,7 +36,8 @@ class Contacts:
     def view(self):
     
     def add(self):
-        first_name = input()
+        for i 
+        first_name = input('First Name:')
         last_name = input()
         phone = input()
         address = input()
