@@ -38,6 +38,9 @@ class Contacts:
     def add(self):
         first_name = input()
         last_name = input()
+        phone = input()
+        address = input()
+        notes = input()
 
     def delete_contact(self):
 
