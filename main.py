@@ -1,4 +1,4 @@
-con
+contacts
 
 class Contacts:
     def __init__(self):
@@ -17,7 +17,7 @@ class Contacts:
         user_input = input()
         self.menu_switch(user_input)
 
-    def menu_switch(self, user_input)
+    def menu_switch(self, user_input):
         if user_input === 1:
             self.view()
         elif user_input === 2:
