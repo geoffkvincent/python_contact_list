@@ -1,4 +1,4 @@
-contacts
+contacts = []
 
 class Contacts:
     def __init__(self):
