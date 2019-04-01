@@ -37,11 +37,11 @@ class Contacts:
     def view(self):
     
     def add_contact(self):
-        contact['first_name'] = input('First Name:')
-        contact['last_name'] = input('Last Name:')
-        contact['phone'] = input()
-        contact['address'] = input()
-        contact['notes'] = input()
+        global contact['first_name'] = input('First Name:')
+        global contact['last_name'] = input('Last Name:')
+        contact['phone'] = input('Phone:')
+        contact['address'] = input('Address:')
+        contact['notes'] = input('Notes:')
 
     def delete_contact(self):
 
