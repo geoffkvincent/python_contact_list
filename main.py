@@ -44,10 +44,18 @@ class Contacts:
         contact['address'] = input('Address:')
         contact['notes'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
+        self.contact_review()
         save_contact = input()
         if save_contact == 'y':
             global contacts.append(contact)
+            print('Your contact has been saved')
 
+    def contact_review(self):
+        print(f"First Name:{contact['first_name']}")
+        print(f"Last Name:{contact['first_name']}")
+        print(f"First Name:{contact['first_name']}")
+        print(f"First Name:{contact['first_name']}")
+        print(f"First Name:{contact['first_name']}")
 
     def delete_contact(self):
 
