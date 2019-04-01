@@ -33,7 +33,6 @@ class Contacts:
           print('Invalid Input')
           self.menu()
 
-
     def view(self):
     
     def add_contact(self):
@@ -51,11 +50,14 @@ class Contacts:
             global contacts.append(contact)
             print('Your contact has been saved')
             contact = {}
+            self.menu()
         elif save_contact == 'n':
             print('Contact has been deleted')
             contact = {}
+            self.menu()
         else:
             print('Invalid Input')
+            self.menu()
 
     def contact_review(self):
         print(f"First Name:{contact['first_name']}")
