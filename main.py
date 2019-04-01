@@ -18,15 +18,15 @@ class Contacts:
         self.menu_switch(user_input)
 
     def menu_switch(self, user_input):
-        if user_input === 1:
+        if user_input == 1:
             self.view()
-        elif user_input === 2:
-            self.add()
-        elif user_input === 3:
+        elif user_input == 2:
+            self.add_contact()
+        elif user_input == 3:
             self.delete_contact()
-        elif user_input === 4:
+        elif user_input == 4:
             self.print_contacts()
-        elif user_input === 5:
+        elif user_input == 5:
             exit()
         else:
           print('Invalid Input')
@@ -35,8 +35,7 @@ class Contacts:
 
     def view(self):
     
-    def add(self):
-        for i 
+    def add_contact(self):
         first_name = input('First Name:')
         last_name = input()
         phone = input()
@@ -47,4 +46,4 @@ class Contacts:
 
     def print_contacts(self):
 
-    def 
+
