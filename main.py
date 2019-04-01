@@ -42,7 +42,7 @@ class Contacts:
         contact['last_name'] = input('Last Name:')
         contact['phone'] = input('Phone:')
         contact['address'] = input('Address:')
-        contact['notes'] = input('Notes:')
+        contact['note'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
         self.contact_review()
         save_contact = input()
@@ -52,10 +52,10 @@ class Contacts:
 
     def contact_review(self):
         print(f"First Name:{contact['first_name']}")
-        print(f"Last Name:{contact['first_name']}")
-        print(f"First Name:{contact['first_name']}")
-        print(f"First Name:{contact['first_name']}")
-        print(f"First Name:{contact['first_name']}")
+        print(f"Last Name:{contact['last_name']}")
+        print(f"Phone:{contact['phone']}")
+        print(f"Address:{contact['address']}")
+        print(f"Notes:{contact['note']}")
 
     def delete_contact(self):
 
