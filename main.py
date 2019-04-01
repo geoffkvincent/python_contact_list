@@ -51,7 +51,11 @@ class Contacts:
             global contacts.append(contact)
             print('Your contact has been saved')
             contact = {}
-        elif save_contact == 'n'
+        elif save_contact == 'n':
+            print('Contact has been deleted')
+            contact = {}
+        else:
+            print('Invalid Input')
 
     def contact_review(self):
         print(f"First Name:{contact['first_name']}")
