@@ -44,7 +44,9 @@ class Contacts:
         global contact['notes'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
         save_contact = input()
-        
+        if save_contact == 'y':
+            global contacts.append(global contact)
+
 
     def delete_contact(self):
 
