@@ -39,9 +39,12 @@ class Contacts:
     def add_contact(self):
         global contact['first_name'] = input('First Name:')
         global contact['last_name'] = input('Last Name:')
-        contact['phone'] = input('Phone:')
-        contact['address'] = input('Address:')
-        contact['notes'] = input('Notes:')
+        global contact['phone'] = input('Phone:')
+        global contact['address'] = input('Address:')
+        global contact['notes'] = input('Notes:')
+        print('Do you wish to save this contact? y/n')
+        save_contact = input()
+        
 
     def delete_contact(self):
 
