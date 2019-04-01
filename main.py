@@ -37,15 +37,16 @@ class Contacts:
     def view(self):
     
     def add_contact(self):
-        global contact['first_name'] = input('First Name:')
-        global contact['last_name'] = input('Last Name:')
-        global contact['phone'] = input('Phone:')
-        global contact['address'] = input('Address:')
-        global contact['notes'] = input('Notes:')
+        contact = {}
+        contact['first_name'] = input('First Name:')
+        contact['last_name'] = input('Last Name:')
+        contact['phone'] = input('Phone:')
+        contact['address'] = input('Address:')
+        contact['notes'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
         save_contact = input()
         if save_contact == 'y':
-            global contacts.append(global contact)
+            global contacts.append(contact)
 
 
     def delete_contact(self):
