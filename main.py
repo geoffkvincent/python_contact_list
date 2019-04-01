@@ -46,9 +46,12 @@ class Contacts:
         print('Do you wish to save this contact? y/n')
         self.contact_review()
         save_contact = input()
+        save_contact = save_contact.lower()
         if save_contact == 'y':
             global contacts.append(contact)
             print('Your contact has been saved')
+            contact = {}
+        elif save_contact == 'n'
 
     def contact_review(self):
         print(f"First Name:{contact['first_name']}")
