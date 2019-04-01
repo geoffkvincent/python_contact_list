@@ -38,10 +38,10 @@ class Contacts:
     
     def add_contact(self):
         contact['first_name'] = input('First Name:')
-        contact['last_name'] = input()
-        phone = input()
-        address = input()
-        notes = input()
+        contact['last_name'] = input('Last Name:')
+        contact['phone'] = input()
+        contact['address'] = input()
+        contact['notes'] = input()
 
     def delete_contact(self):
 
