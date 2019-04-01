@@ -1,4 +1,5 @@
 contacts = []
+contact = {}
 
 class Contacts:
     def __init__(self):
