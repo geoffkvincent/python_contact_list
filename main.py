@@ -1,7 +1,7 @@
 contacts = []
 contact = {}
 
-class Contacts:
+class ContactsList:
     def __init__(self):
         print('================')
         print('  Contact List  ')
@@ -32,8 +32,6 @@ class Contacts:
         else:
           print('Invalid Input')
           self.menu()
-
-    def view(self):
     
     def add_contact(self):
         contact = {}
@@ -70,4 +68,5 @@ class Contacts:
 
     def print_contacts(self):
 
-
+contact_list = ContactsList()
+contack_list.menu()
