@@ -64,9 +64,5 @@ class ContactsList:
         print(f"Address:{contact['address']}")
         print(f"Notes:{contact['note']}")
 
-    def delete_contact(self):
-
-    def print_contacts(self):
-
 contact_list = ContactsList()
 contack_list.menu()
