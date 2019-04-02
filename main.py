@@ -36,14 +36,14 @@ class ContactsList:
     
     def add_contact(self):
         contact = {}
-        contact['first_name'] = input('First Name:')
-        contact['last_name'] = input('Last Name:')
-        contact['phone'] = input('Phone:')
-        contact['address'] = input('Address:')
-        contact['note'] = input('Notes:')
+        contact['first_name'] = eval(input('First Name:'))
+        contact['last_name'] = eval(input('Last Name:'))
+        contact['phone'] = eval(input('Phone:'))
+        contact['address'] = eval(input('Address:'))
+        contact['note'] = eval(input('Notes:'))
         print('Do you wish to save this contact? y/n')
         self.contact_review()
-        save_contact = input()
+        save_contact = eval(input())
         save_contact = save_contact.lower()
         if save_contact == 'y':
             print('Your contact has been saved')
