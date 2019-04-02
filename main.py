@@ -28,7 +28,7 @@ class ContactsList:
         elif user_input == 4:
             self.print_contacts()
         elif user_input == 5:
-            print('hello')
+            print('Goodbye')
             exit()
         else:
           print('Invalid Input')
