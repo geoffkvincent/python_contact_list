@@ -15,7 +15,7 @@ class ContactsList:
         print('3) Delete Contact')
         print('4) Print')
         print('5) Exit')
-        user_input = input()
+        user_input = eval(input())
         self.menu_switch(user_input)
 
     def menu_switch(self, user_input):
@@ -28,6 +28,7 @@ class ContactsList:
         elif user_input == 4:
             self.print_contacts()
         elif user_input == 5:
+            print('hello')
             exit()
         else:
           print('Invalid Input')
@@ -45,7 +46,6 @@ class ContactsList:
         save_contact = input()
         save_contact = save_contact.lower()
         if save_contact == 'y':
-            global contacts.append(contact)
             print('Your contact has been saved')
             contact = {}
             self.menu()
