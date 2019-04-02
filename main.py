@@ -35,7 +35,13 @@ class ContactsList:
           self.menu()
     
     def add_contact(self):
-        contact = {}
+        contact = {
+            'first_name': '', 
+            'last_name': '', 
+            'phone': '',
+            'address': '',
+            'note': '',
+        }
         contact['first_name'] = eval(input('First Name:'))
         contact['last_name'] = eval(input('Last Name:'))
         contact['phone'] = eval(input('Phone:'))
