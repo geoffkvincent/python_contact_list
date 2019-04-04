@@ -35,9 +35,8 @@ class ContactsList:
 
     def view(self):
         global contacts
-        for index, contact in enumerate(contacts):
-            new_contact = enumerate(contact['first_name'])
-            print(new_contact)
+        for index, contact in enumerate(contacts, start=1):
+            print(index, contact['first_name'])
     
     def add_contact(self):
         global contacts
