@@ -43,7 +43,7 @@ class ContactsList:
             'note': '',
         }
         contact['first_name'] = input('First Name:')
-        contact['last_name'] = eval(input('Last Name:'))
+        contact['last_name'] = input('Last Name:')
         contact['phone'] = eval(input('Phone:'))
         contact['address'] = eval(input('Address:'))
         contact['note'] = eval(input('Notes:'))
