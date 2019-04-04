@@ -63,7 +63,7 @@ class ContactsList:
             print('Invalid Input')
             self.menu()
 
-    def contact_review(self):
+    def contact_review(self, contact):
         print(f"First Name:{contact['first_name']}")
         print(f"Last Name:{contact['last_name']}")
         print(f"Phone:{contact['phone']}")
