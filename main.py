@@ -42,7 +42,7 @@ class ContactsList:
             'address': '',
             'note': '',
         }
-        contact['first_name'] = eval(input('First Name:'))
+        contact['first_name'] = input('First Name:')
         contact['last_name'] = eval(input('Last Name:'))
         contact['phone'] = eval(input('Phone:'))
         contact['address'] = eval(input('Address:'))
