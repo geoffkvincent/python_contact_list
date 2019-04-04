@@ -32,6 +32,11 @@ class ContactsList:
         else:
           print('Invalid Input')
           self.menu()
+
+    def view(self):
+        global contacts
+        for contact in contacts:
+            print(contact['first_name'])
     
     def add_contact(self):
         global contacts
