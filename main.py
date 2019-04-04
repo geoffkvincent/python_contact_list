@@ -48,8 +48,8 @@ class ContactsList:
         contact['address'] = input('Address:')
         contact['note'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
-        self.contact_review()
-        save_contact = eval(input())
+        self.contact_review(contact)
+        save_contact = input()
         save_contact = save_contact.lower()
         if save_contact == 'y':
             print('Your contact has been saved')
