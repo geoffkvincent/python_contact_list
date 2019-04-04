@@ -46,7 +46,7 @@ class ContactsList:
         contact['last_name'] = input('Last Name:')
         contact['phone'] = input('Phone:')
         contact['address'] = input('Address:')
-        contact['note'] = eval(input('Notes:'))
+        contact['note'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
         self.contact_review()
         save_contact = eval(input())
