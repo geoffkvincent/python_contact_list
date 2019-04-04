@@ -35,8 +35,9 @@ class ContactsList:
 
     def view(self):
         global contacts
-        for contact in contacts:
-            print(contact['first_name'])
+        for index, contact in enumerate(contacts):
+            new_contact = enumerate(contact['first_name'])
+            print(new_contact)
     
     def add_contact(self):
         global contacts
@@ -54,13 +55,12 @@ class ContactsList:
         contact['note'] = input('Notes:')
         print('Do you wish to save this contact? y/n')
         self.contact_review(contact)
-        save_contact = input()
+        save_contact = input('(y/n)')
         save_contact = save_contact.lower()
         if save_contact == 'y':
             print('Your contact has been saved')
             contacts.append(contact)
             contact = {}
-            print(contacts)
             self.menu()
         elif save_contact == 'n':
             print('Contact has been deleted')
@@ -78,4 +78,4 @@ class ContactsList:
         print(f"Notes:{contact['note']}")
 
 contact_list = ContactsList()
-contack_list.menu()
+contact_list.menu()
