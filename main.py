@@ -1,5 +1,4 @@
 contacts = []
-contact = {}
 
 class ContactsList:
     def __init__(self):
@@ -53,6 +52,7 @@ class ContactsList:
         save_contact = save_contact.lower()
         if save_contact == 'y':
             print('Your contact has been saved')
+            print(global contacts)
             contact = {}
             self.menu()
         elif save_contact == 'n':
