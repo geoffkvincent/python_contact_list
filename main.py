@@ -1,5 +1,7 @@
 from termcolor import colored, cprint
-contacts = []
+contacts = [
+    {'first_name': 'Geoff', 'last_name': 'Vincent', 'phone': '555-1234', }
+]
 
 class ContactsList:
     def __init__(self):
