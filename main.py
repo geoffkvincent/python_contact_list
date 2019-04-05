@@ -1,6 +1,8 @@
 from termcolor import colored, cprint
 contacts = [
-    {'first_name': 'Geoff', 'last_name': 'Vincent', 'phone': '555-1234', }
+    {'first_name': 'Geoff', 'last_name': 'Vincent', 'phone': '555-1234', 'note': 'not a very cool guy' },
+    {'first_name': 'Mike', 'last_name': 'Coker', 'phone': '535-1234', 'note': 'very cool guy' },
+    {'first_name': 'Max', 'last_name': 'Crebs', 'phone': '595-1254', 'note': 'very cool guy' },
 ]
 
 class ContactsList:
