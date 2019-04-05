@@ -42,10 +42,17 @@ class ContactsList:
 
     def view(self):
         global contacts
-        cprint('========================', 'magenta')
+        cprint('=========================', 'magenta')
+        print('Enter index to see details')
         for index, contact in enumerate(contacts, start=1):
             print(index, contact['first_name'])
-        user_input = input('Enter index to see details:  ')
+            import pdb; pdb.set_trace()
+        user_input = input()
+        for index, contact in enumerate(contacts, start=1):
+            if index == user_input:
+                contact_select = index
+                print(contact_select)
+            
 
     
     def add_contact(self):
