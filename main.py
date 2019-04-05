@@ -1,3 +1,4 @@
+from termcolor import colored
 contacts = []
 
 class ContactsList:
@@ -52,12 +53,16 @@ class ContactsList:
         contact['phone'] = input('Phone:')
         contact['address'] = input('Address:')
         contact['note'] = input('Notes:')
+        print('=====================================')
         print('Do you wish to save this contact? y/n')
+        print('=====================================')
         self.contact_review(contact)
         save_contact = input('(y/n)')
         save_contact = save_contact.lower()
         if save_contact == 'y':
+            print('===========================')
             print('Your contact has been saved')
+            print('===========================')
             contacts.append(contact)
             contact = {}
             self.menu()
