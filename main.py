@@ -47,12 +47,12 @@ class ContactsList:
         for index, contact in enumerate(contacts, start=1):
             print(index, contact['first_name'])
         user_input = int(input())
+        cprint('=========', 'magenta')
         for index, contact in enumerate(contacts, start=1):
             if index == user_input:
                 for i in contact:
-                    cprint('=========', 'magenta')
                     print(contact[i])
-                    cprint('=========', 'magenta')
+        cprint('=========', 'magenta')
     
     def add_contact(self):
         global contacts
