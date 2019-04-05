@@ -48,13 +48,11 @@ class ContactsList:
             'first_name': '', 
             'last_name': '', 
             'phone': '',
-            'address': '',
             'note': '',
         }
         contact['first_name'] = input('First Name:')
         contact['last_name'] = input('Last Name:')
         contact['phone'] = input('Phone:')
-        contact['address'] = input('Address:')
         contact['note'] = input('Notes:')
         print('=====================================')
         print('Do you wish to save this contact? y/n')
@@ -81,7 +79,6 @@ class ContactsList:
         print(f"First Name:{contact['first_name']}")
         print(f"Last Name:{contact['last_name']}")
         print(f"Phone:{contact['phone']}")
-        print(f"Address:{contact['address']}")
         print(f"Notes:{contact['note']}")
 
 contact_list = ContactsList()
