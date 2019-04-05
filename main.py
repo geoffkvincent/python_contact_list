@@ -3,9 +3,9 @@ contacts = []
 
 class ContactsList:
     def __init__(self):
-        cprint('================', 'magenta')
-        cprint('  Contact List  ', 'magenta')
-        cprint('================', 'magenta')
+        cprint('========================', 'magenta')
+        cprint('      Contact List  ', 'magenta')
+        cprint('========================', 'magenta')
         self.menu()
 
     def menu(self):
