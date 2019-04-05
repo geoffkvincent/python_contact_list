@@ -1,3 +1,4 @@
+  # import pdb; pdb.set_trace()
 from termcolor import colored, cprint
 contacts = [
     {'first_name': 'Geoff', 'last_name': 'Vincent', 'phone': '555-1234', 'note': 'not a very cool guy' },
@@ -41,8 +42,11 @@ class ContactsList:
 
     def view(self):
         global contacts
+        cprint('========================', 'magenta')
         for index, contact in enumerate(contacts, start=1):
             print(index, contact['first_name'])
+        user_input = input('Enter index to see details:  ')
+
     
     def add_contact(self):
         global contacts
