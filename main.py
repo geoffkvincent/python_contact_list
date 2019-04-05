@@ -62,20 +62,21 @@ class ContactsList:
             'phone': '',
             'note': '',
         }
+        cprint('=====================================','magenta')
         contact['first_name'] = input('First Name:')
         contact['last_name'] = input('Last Name:')
         contact['phone'] = input('Phone:')
         contact['note'] = input('Notes:')
-        print('=====================================')
-        print('Do you wish to save this contact? y/n')
-        print('=====================================')
+        cprint('=====================================', 'magenta')
+        cprint('Do you wish to save this contact? y/n', 'yellow')
+        cprint('=====================================', 'magenta')
         self.contact_review(contact)
         save_contact = input('(y/n)')
         save_contact = save_contact.lower()
         if save_contact == 'y':
-            print('===========================')
-            print('Your contact has been saved')
-            print('===========================')
+            cprint('===========================', 'magenta')
+            cprint('Your contact has been saved', 'yellow')
+            cprint('===========================', 'magenta')
             contacts.append(contact)
             contact = {}
             self.menu()
