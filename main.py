@@ -75,17 +75,17 @@ class ContactsList:
         save_contact = save_contact.lower()
         if save_contact == 'y':
             cprint('===========================', 'magenta')
-            cprint('Your contact has been saved', 'yellow')
+            print('Your contact has been saved')
             cprint('===========================', 'magenta')
             contacts.append(contact)
             contact = {}
             self.menu()
         elif save_contact == 'n':
-            print('Contact has been deleted')
+            cprint('Contact has been deleted', 'red')
             contact = {}
             self.menu()
         else:
-            print('Invalid Input')
+            cprint('Invalid Input', 'red')
             self.menu()
 
     def contact_review(self, contact):
