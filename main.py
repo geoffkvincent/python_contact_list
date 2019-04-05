@@ -1,4 +1,4 @@
-from termcolor import colored
+from termcolor import colored, cprint
 contacts = []
 
 class ContactsList:
@@ -9,7 +9,7 @@ class ContactsList:
         self.menu()
 
     def menu(self):
-        print('please make a selection')
+        cprint('please make a selection', 'red')
         print('1) View Contacts')
         print('2) Add Contact')
         print('3) Delete Contact')
