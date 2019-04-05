@@ -9,7 +9,8 @@ class ContactsList:
         self.menu()
 
     def menu(self):
-        cprint('please make a selection', 'red')
+        cprint('Please make a selection:', 'yellow')
+        cprint('========================', 'magenta')
         print('1) View Contacts')
         print('2) Add Contact')
         print('3) Delete Contact')
