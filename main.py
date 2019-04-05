@@ -22,6 +22,7 @@ class ContactsList:
         print('4) Print')
         print('5) Exit')
         user_input = eval(input())
+        cprint('=========================', 'magenta')
         self.menu_switch(user_input)
 
     def menu_switch(self, user_input):
@@ -37,22 +38,25 @@ class ContactsList:
             print('Goodbye')
             exit()
         else:
-          print('Invalid Input')
+          cprint('Invalid Input', 'red')
           self.menu()
+
+    def delete_contact(self):
+        global contacts
+        cprint('Enter index of contact to delete', 'red')
 
     def view(self):
         global contacts
-        cprint('=========================', 'magenta')
-        print('Enter index to see details')
+        cprint('Enter index to see details', 'yellow')
         for index, contact in enumerate(contacts, start=1):
             print(index, contact['first_name'])
         user_input = int(input())
-        cprint('=========', 'magenta')
+        cprint('===============', 'magenta')
         for index, contact in enumerate(contacts, start=1):
             if index == user_input:
                 for i in contact:
                     print(contact[i])
-        cprint('=========', 'magenta')
+        cprint('===============', 'magenta')
     
     def add_contact(self):
         global contacts
