@@ -20,6 +20,7 @@ class ContactsList:
         print('2) Add Contact')
         print('3) Print')
         print('4) Exit')
+        cprint('========================', 'magenta')
         user_input = int(input())
         cprint('=========================', 'magenta')
         self.menu_switch(user_input)
@@ -41,17 +42,20 @@ class ContactsList:
     def view(self):
         global contacts
         cprint('Enter index to see details', 'yellow')
+        cprint('=========================', 'magenta')
         for index, contact in enumerate(contacts, start=1):
-            print(index, contact['first_name'])
+            name = contact['first_name']
+            print(f"{index}. {name}")
+        cprint('=========================', 'magenta')
         user_input = int(input())
-        cprint('===============', 'magenta')
+        cprint('=========================', 'magenta')
         for index, contact in enumerate(contacts, start=1):
             if index == user_input:
                 contact_select = contact
-                for i in contact:
+                for i in contact_select:
                     print(contact[i])
                 cprint('==========================', 'magenta')
-                print('1) Edit  2) Delete  3) Menu')
+                cprint('1) Edit  2) Delete  3) Menu', 'yellow')
                 cprint('==========================', 'magenta')
                 view_option = int(input('Enter the number of desired option: '))
                 self.view_switch(view_option, contact_select)
@@ -68,7 +72,12 @@ class ContactsList:
             self.menu()
 
     def edit_contact(self, contact_select):
-        print(contact_select)
+        cprint('=========================', 'magenta')
+        cprint('Enter index to edit field', 'yellow')
+        cprint('=========================', 'magenta')
+        for index, edit_field in enumerate(contact_select, 1):
+            print(f"{index}. {edit_field.keys()}: {edit_field.values()}")
+        edit_option = int(input())
     
     def delete_contact(self, contact_select):
         print(contact_select)
