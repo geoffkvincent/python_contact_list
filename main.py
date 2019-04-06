@@ -18,9 +18,8 @@ class ContactsList:
         cprint('========================', 'magenta')
         print('1) View Contacts')
         print('2) Add Contact')
-        print('3) Delete Contact')
-        print('4) Print')
-        print('5) Exit')
+        print('3) Print')
+        print('4) Exit')
         user_input = eval(input())
         cprint('=========================', 'magenta')
         self.menu_switch(user_input)
@@ -31,10 +30,8 @@ class ContactsList:
         elif user_input == 2:
             self.add_contact()
         elif user_input == 3:
-            self.delete_contact()
-        elif user_input == 4:
             self.print_contacts()
-        elif user_input == 5:
+        elif user_input == 4:
             print('Goodbye')
             exit()
         else:
