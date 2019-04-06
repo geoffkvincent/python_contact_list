@@ -20,7 +20,7 @@ class ContactsList:
         print('2) Add Contact')
         print('3) Print')
         print('4) Exit')
-        user_input = eval(input())
+        user_input = int(input())
         cprint('=========================', 'magenta')
         self.menu_switch(user_input)
 
@@ -47,13 +47,13 @@ class ContactsList:
         cprint('===============', 'magenta')
         for index, contact in enumerate(contacts, start=1):
             if index == user_input:
+                contact_select = contact
                 for i in contact:
-                    contact_select = contact[i]
-                    print(contact_select)
+                    print(contact[i])
                 cprint('==========================', 'magenta')
                 print('1) Edit  2) Delete  3) Menu')
                 cprint('==========================', 'magenta')
-                view_option = input('Enter the number of desired option: ')
+                view_option = int(input('Enter the number of desired option: '))
                 self.view_switch(view_option, contact_select)
 
     def view_switch(self, view_option, contact_select):
@@ -67,10 +67,10 @@ class ContactsList:
             cprint('Invalid Input', 'red')
             self.menu()
 
-    def edit_contact(self, contact_select)
+    def edit_contact(self, contact_select):
         print(contact_select)
     
-    def delete_contact(contact_select)
+    def delete_contact(self, contact_select):
         print(contact_select)
                 
     def add_contact(self):
