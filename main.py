@@ -66,6 +66,12 @@ class ContactsList:
         else:
             cprint('Invalid Input', 'red')
             self.menu()
+
+    def edit_contact(self, contact_select)
+        print(contact_select)
+    
+    def delete_contact(contact_select)
+        print(contact_select)
                 
     def add_contact(self):
         global contacts
