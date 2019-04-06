@@ -48,10 +48,17 @@ class ContactsList:
         for index, contact in enumerate(contacts, start=1):
             if index == user_input:
                 for i in contact:
-                    print(contact[i])
+                    contact_select = contact[i]
+                    print(contact_select)
+                cprint('==========================', 'magenta')
+                print('1) Edit  2) Delete  3) Menu')
+                cprint('==========================', 'magenta')
+                view_option = input('Enter the number of desired option: ')
+
+    def view_switch(self, view_option, contact):
+        if view_option == 1:
+            self.edit_contact
                 
-                print('1) Edit  2) Delete  3)Menu')
-                option_input = input('Enter the number of desired option: ')
         cprint('===============', 'magenta')
     
     def add_contact(self):
