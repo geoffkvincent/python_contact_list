@@ -38,12 +38,6 @@ class ContactsList:
           cprint('Invalid Input', 'red')
           self.menu()
 
-    def delete_contact(self):
-        global contacts
-        cprint('Enter index of contact to delete', 'red')
-        for index, contact in enumerate(contacts, start=1):
-            print
-
     def view(self):
         global contacts
         cprint('Enter index to see details', 'yellow')
