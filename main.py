@@ -44,6 +44,7 @@ class ContactsList:
     def delete_contact(self):
         global contacts
         cprint('Enter index of contact to delete', 'red')
+        for index, contact in enumerate(contacts, start=1):
 
     def view(self):
         global contacts
