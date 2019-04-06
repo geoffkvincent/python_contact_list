@@ -45,6 +45,7 @@ class ContactsList:
         global contacts
         cprint('Enter index of contact to delete', 'red')
         for index, contact in enumerate(contacts, start=1):
+            print
 
     def view(self):
         global contacts
@@ -57,6 +58,9 @@ class ContactsList:
             if index == user_input:
                 for i in contact:
                     print(contact[i])
+                
+                print('1) Edit  2) Delete')
+                option_input = input(':')
         cprint('===============', 'magenta')
     
     def add_contact(self):
