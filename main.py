@@ -20,7 +20,7 @@ class ContactsList:
         print('2) Add Contact')
         print('3) Print')
         print('4) Exit')
-        cprint('========================', 'magenta')
+        cprint('=========================', 'magenta')
         user_input = int(input())
         cprint('=========================', 'magenta')
         self.menu_switch(user_input)
@@ -75,10 +75,17 @@ class ContactsList:
         cprint('=========================', 'magenta')
         cprint('Enter index to edit field', 'yellow')
         cprint('=========================', 'magenta')
-        for index, edit_field in enumerate(contact_select, 1):
-            print(f"{index}. {edit_field.keys()}: {edit_field.values()}")
+        contact_select = contact_select.items()
+        for index, (k,v) in enumerate(contact_select, 1):
+            print(f"{index}.{k}: {v}")
         edit_option = int(input())
-    
+        for index, (k,v) in enumerate(contact_select, 1):
+            if index == edit_option:
+                edit_select = f"{k}: {v}"
+                print(edit_select)
+                contact_update = input('Enter updated info:')
+                contact_select['k'] = contact_update
+
     def delete_contact(self, contact_select):
         print(contact_select)
                 
