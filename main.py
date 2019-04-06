@@ -59,8 +59,8 @@ class ContactsList:
                 for i in contact:
                     print(contact[i])
                 
-                print('1) Edit  2) Delete')
-                option_input = input(':')
+                print('1) Edit  2) Delete  3)Menu')
+                option_input = input('Enter the number of desired option: ')
         cprint('===============', 'magenta')
     
     def add_contact(self):
