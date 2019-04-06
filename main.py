@@ -58,9 +58,9 @@ class ContactsList:
 
     def view_switch(self, view_option, contact_select):
         if view_option == 1:
-            self.edit_contact()
+            self.edit_contact(contact_select)
         elif view_option == 2:
-            self.delete_contact()
+            self.delete_contact(contact_select)
         elif view_option == 3:
             self.menu()
         else:
