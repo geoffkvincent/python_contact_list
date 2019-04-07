@@ -84,11 +84,17 @@ class ContactsList:
                 print(edit_select)
                 contact_update = input('Enter updated info:')
                 print(f"{v} has been updated to {contact_update}.")
-                edit_confirm = input('Is this correct? (y/n)')
+                edit_confirm = input('Save changes? (y/n)')
                 if edit_confirm == 'y':
                     contact_select[f"{k}"] = contact_update
-                    print(f"{v} has been updated to {contact_select[k]}")
-                    print(contact_select)
+                    print("Your contact has been updated")
+                    self.view()
+                elif edit_confirm == 'n':
+                    print('Update has been disregarded')
+                    self.view()
+                else:
+                    cprint('Invalid Input', 'red')
+                    self.edit_contact(contact_select)
 
     def delete_contact(self, contact_select):
         print(contact_select)
