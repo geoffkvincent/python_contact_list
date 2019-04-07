@@ -84,10 +84,11 @@ class ContactsList:
                 print(edit_select)
                 contact_update = input('Enter updated info:')
                 print(f"{v} has been updated to {contact_update}.")
-                input('Is this correct? (y/n')
-                contact_select[f"{k}"] = contact_update
-                print(f"{v} has been updated to {contact_select[k]}")
-                print(contact_select)
+                edit_confirm = input('Is this correct? (y/n)')
+                if edit_confirm == 'y':
+                    contact_select[f"{k}"] = contact_update
+                    print(f"{v} has been updated to {contact_select[k]}")
+                    print(contact_select)
 
     def delete_contact(self, contact_select):
         print(contact_select)
