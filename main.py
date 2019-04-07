@@ -75,9 +75,7 @@ class ContactsList:
         cprint('=========================', 'magenta')
         cprint('Enter index to edit field', 'yellow')
         cprint('=========================', 'magenta')
-        # contact_select = contact_select.items()
         for index, (k, v) in enumerate(contact_select.items(), 1):
-            # import pdb; pdb.set_trace()
             print(f"{index}. {k}  {v}")
         edit_option = int(input())
         for index, (k,v) in enumerate(contact_select.items(), 1):
@@ -85,8 +83,10 @@ class ContactsList:
                 edit_select = f"{k}: {v}"
                 print(edit_select)
                 contact_update = input('Enter updated info:')
+                print(f"{v} has been updated to {contact_update}.")
+                input('Is this correct? (y/n')
                 contact_select[f"{k}"] = contact_update
-                print(contact_select[k])
+                print(f"{v} has been updated to {contact_select[k]}")
                 print(contact_select)
 
     def delete_contact(self, contact_select):
