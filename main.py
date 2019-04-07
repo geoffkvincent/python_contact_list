@@ -45,7 +45,7 @@ class ContactsList:
         cprint('=========================', 'magenta')
         for index, contact in enumerate(contacts, start=1):
             name = contact['first_name']
-            print(f"{index}. {name}")
+            print(f"{index}) {name}")
         cprint('=========================', 'magenta')
         user_input = int(input())
         cprint('=========================', 'magenta')
@@ -76,7 +76,7 @@ class ContactsList:
         cprint('Enter index to edit field', 'yellow')
         cprint('=========================', 'magenta')
         for index, (k, v) in enumerate(contact_select.items(), 1):
-            print(f"{index}. {k}  {v}")
+            print(f"{index}) {k}:  {v}")
         edit_option = int(input())
         for index, (k,v) in enumerate(contact_select.items(), 1):
             if index == edit_option:
