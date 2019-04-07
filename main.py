@@ -77,22 +77,31 @@ class ContactsList:
         cprint('=========================', 'magenta')
         for index, (k, v) in enumerate(contact_select.items(), 1):
             print(f"{index}) {k}:  {v}")
+        cprint('=========================', 'magenta')
         edit_option = int(input())
+        cprint('=========================', 'magenta')
         for index, (k,v) in enumerate(contact_select.items(), 1):
             if index == edit_option:
                 edit_select = f"{k}: {v}"
                 print(edit_select)
                 contact_update = input('Enter updated info:')
-                print(f"{v} has been updated to {contact_update}.")
-                edit_confirm = input('Save changes? (y/n)')
+                cprint('=========================', 'magenta')
+                cprint(f"{v} has been updated to {contact_update}.", 'yellow')
+                cprint('=========================', 'magenta')
+                edit_confirm = input('Save changes? (y/n) : ')
                 if edit_confirm == 'y':
+                    cprint('=========================', 'magenta')
                     contact_select[f"{k}"] = contact_update
                     print("Your contact has been updated")
+                    cprint('=========================', 'magenta')
                     self.view()
                 elif edit_confirm == 'n':
+                    cprint('=========================', 'magenta')
                     print('Update has been disregarded')
+                    cprint('=========================', 'magenta')
                     self.view()
                 else:
+                    cprint('=========================', 'magenta')
                     cprint('Invalid Input', 'red')
                     self.edit_contact(contact_select)
 
