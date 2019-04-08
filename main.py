@@ -97,7 +97,7 @@ class ContactsList:
                     self.view()
                 elif edit_confirm == 'n':
                     cprint('=========================', 'magenta')
-                    print('Update has been disregarded')
+                    print('Update disregarded')
                     cprint('=========================', 'magenta')
                     self.view()
                 else:
@@ -106,7 +106,8 @@ class ContactsList:
                     self.edit_contact(contact_select)
 
     def delete_contact(self, contact_select):
-        print(contact_select)
+        delete_confirm = input('Are you sure?(y/n): ')
+        
                 
     def add_contact(self):
         global contacts
