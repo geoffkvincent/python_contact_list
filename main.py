@@ -112,6 +112,11 @@ class ContactsList:
         if delete_confirm == 'y':
             contacts.remove(contact_select)
             cprint(f'{name} contact has been deleted', 'red')
+        elif delete_confirm == 'n':
+            self.view()
+        else:
+            cprint('Invalid Input', 'red')
+            self.view()
 
                 
     def add_contact(self):
