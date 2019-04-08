@@ -58,13 +58,13 @@ class ContactsList:
                 cprint('1) Edit  2) Delete  3) Menu', 'yellow')
                 cprint('==========================', 'magenta')
                 view_option = int(input('Enter the number of desired option: '))
-                self.view_switch(view_option, contact_select)
+                self.view_switch(view_option, contact_select, name)
 
-    def view_switch(self, view_option, contact_select):
+    def view_switch(self, view_option, contact_select, name):
         if view_option == 1:
             self.edit_contact(contact_select)
         elif view_option == 2:
-            self.delete_contact(contact_select)
+            self.delete_contact(contact_select,name)
         elif view_option == 3:
             self.menu()
         else:
@@ -105,9 +105,14 @@ class ContactsList:
                     cprint('Invalid Input', 'red')
                     self.edit_contact(contact_select)
 
-    def delete_contact(self, contact_select):
-        delete_confirm = input('Are you sure?(y/n): ')
-        
+    def delete_contact(self, contact_select, name):
+        global contacts
+        cprint('Are you sure?(y/n): ', 'red')
+        delete_confirm = input().downcase()
+        if delete_confirm == 'y':
+            contacts.remove(contact_select)
+            cprint(f'{name} contact has been deleted', 'red')
+
                 
     def add_contact(self):
         global contacts
