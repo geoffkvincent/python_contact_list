@@ -57,7 +57,7 @@ class ContactsList:
                 cprint('==========================', 'magenta')
                 cprint('1) Edit  2) Delete  3) Menu', 'yellow')
                 cprint('==========================', 'magenta')
-                view_option = int(input('Enter the number of desired option: '))
+                view_option = int(input('Enter index of desired option: '))
                 self.view_switch(view_option, contact_select)
 
     def view_switch(self, view_option, contact_select):
