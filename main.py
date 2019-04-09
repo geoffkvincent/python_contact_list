@@ -64,7 +64,7 @@ class ContactsList:
         if view_option == 1:
             self.edit_contact(contact_select)
         elif view_option == 2:
-            self.delete_contact(contact_select,name)
+            self.delete_contact(contact_select)
         elif view_option == 3:
             self.menu()
         else:
