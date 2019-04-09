@@ -33,7 +33,7 @@ class ContactsList:
         elif user_input == 3:
             self.print_contacts()
         elif user_input == 4:
-            print('Goodbye')
+            cprint('Goodbye', 'yellow')
             exit()
         else:
           cprint('Invalid Input', 'red')
@@ -127,7 +127,6 @@ class ContactsList:
             'phone': '',
             'note': '',
         }
-        cprint('=====================================','magenta')
         contact['first_name'] = input('First Name:')
         contact['last_name'] = input('Last Name:')
         contact['phone'] = input('Phone:')
@@ -158,6 +157,9 @@ class ContactsList:
         print(f"Last Name:{contact['last_name']}")
         print(f"Phone:{contact['phone']}")
         print(f"Notes:{contact['note']}")
+
+    def print_contacts(self):
+        global contacts
 
 contact_list = ContactsList()
 contact_list.menu()
