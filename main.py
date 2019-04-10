@@ -161,13 +161,20 @@ class ContactsList:
 
     def print_contacts(self):
         global contacts
-        file = open('contacts.txt', 'w+')
-        for contact in contacts:
-            for c in contact:
-                file.write(contact[c])
-        file.close()
-        file_created = True
-        self.menu()
+        global file_created
+        if file_created == False:
+            file = open('contacts.txt', 'w+')
+            for contact in contacts:
+                for c in contact:
+                    file.write(f'{contact[c]}\n')
+                file.write('\n')
+                file.write('\n')
+            file.close()
+            file_created = True
+            self.menu()
+        else:
+            
+
 
 
 contact_list = ContactsList()
