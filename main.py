@@ -162,7 +162,8 @@ class ContactsList:
         global contacts
         file = open('contacts.txt', 'w+')
         for contact in contacts:
-            file.write(contact)
+            for c in contact:
+                file.write(contact[c])
         file.close()
 
 contact_list = ContactsList()
