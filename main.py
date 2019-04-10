@@ -138,9 +138,9 @@ class ContactsList:
         save_contact = input('(y/n)')
         save_contact = save_contact.lower()
         if save_contact == 'y':
-            cprint('===========================', 'magenta')
+            cprint('====================', 'magenta')
             print('Your contact has been saved')
-            cprint('===========================', 'magenta')
+            cprint('====================', 'magenta')
             contacts.append(contact)
             contact = {}
             self.menu()
@@ -159,6 +159,7 @@ class ContactsList:
         print(f"Notes:{contact['note']}")
 
     def print_contacts(self):
+        import os
         global contacts
         file = open('contacts.txt', 'w+')
         for contact in contacts:
@@ -167,18 +168,21 @@ class ContactsList:
             file.write('\n')
             file.write('\n')
         file.close()
-        cprint('======================', 'magenta')
         cprint('Printed to root folder')
-        cprint('======================', 'magenta')
-        cprint('1) View file\n  2) Delete file\n  3) Menu', 'yellow')
+        cprint('====================', 'magenta')
+        cprint('1) View file\n2) Delete file\n3) Menu', 'yellow')
+        cprint('====================', 'magenta')
         user_input = int(input())
-        cprint('======================', 'magenta')
+        cprint('====================', 'magenta')
         if user_input == 1:
-            import os
             os.system('open contacts.txt')
-
-        self.menu()
-
+        elif user_input == 2:
+            os.remove('contacts.txt')
+        elif user_input == 3:
+            self.menu()
+        else:
+            cprint('Invalid Input', 'red')
+            self.menu()
 
 contact_list = ContactsList()
 contact_list.menu()
