@@ -162,7 +162,8 @@ class ContactsList:
         global contacts
         file = open('contacts.txt', 'w+')
         for contact in contacts:
-            file.write
+            file.write(contact)
+        
 
 contact_list = ContactsList()
 contact_list.menu()
