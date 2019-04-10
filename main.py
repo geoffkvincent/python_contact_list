@@ -176,8 +176,10 @@ class ContactsList:
         cprint('====================', 'magenta')
         if user_input == 1:
             os.system('open contacts.txt')
+            self.menu()
         elif user_input == 2:
             os.remove('contacts.txt')
+            self.menu()
         elif user_input == 3:
             self.menu()
         else:
