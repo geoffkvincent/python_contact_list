@@ -5,15 +5,17 @@ contacts = [
     {'first_name': 'Mike', 'last_name': 'Coker', 'phone': '535-1234', 'note': 'very cool guy' },
     {'first_name': 'Max', 'last_name': 'Crebs', 'phone': '595-1254', 'note': 'very cool guy' },
 ]
+import os
 
 class ContactsList:
     def __init__(self):
-        cprint('========================', 'magenta')
-        cprint('      Contact List  ', 'magenta')
-        cprint('========================', 'magenta')
         self.menu()
 
     def menu(self):
+        os.system('clear')
+        cprint('========================', 'magenta')
+        cprint('      Contact List  ', 'magenta')
+        cprint('========================', 'magenta')
         cprint('Please make a selection:', 'yellow')
         cprint('========================', 'magenta')
         print('1) View Contacts')
@@ -40,6 +42,7 @@ class ContactsList:
           self.menu()
 
     def view(self):
+        os.system('clear')
         global contacts
         cprint('Enter index to see details', 'yellow')
         cprint('=========================', 'magenta')
@@ -72,6 +75,7 @@ class ContactsList:
             self.menu()
 
     def edit_contact(self, contact_select):
+        os.system('clear')
         cprint('=========================', 'magenta')
         cprint('Enter index to edit field', 'yellow')
         cprint('=========================', 'magenta')
@@ -106,6 +110,7 @@ class ContactsList:
                     self.edit_contact(contact_select)
 
     def delete_contact(self, contact_select):
+        os.system('clear')
         global contacts
         cprint('Are you sure?(y/n): ', 'red')
         delete_confirm = input()
@@ -120,6 +125,7 @@ class ContactsList:
 
                 
     def add_contact(self):
+        os.system('clear')
         global contacts
         contact = {
             'first_name': '', 
@@ -159,7 +165,7 @@ class ContactsList:
         print(f"Notes:{contact['note']}")
 
     def print_contacts(self):
-        import os
+        os.system('clear')
         global contacts
         file = open('contacts.txt', 'w+')
         for contact in contacts:
