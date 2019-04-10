@@ -160,7 +160,8 @@ class ContactsList:
 
     def print_contacts(self):
         global contacts
-        file = 
+        file = open('contacts.txt', 'w+')
+        
 
 contact_list = ContactsList()
 contact_list.menu()
