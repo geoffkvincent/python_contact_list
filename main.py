@@ -5,6 +5,7 @@ contacts = [
     {'first_name': 'Mike', 'last_name': 'Coker', 'phone': '535-1234', 'note': 'very cool guy' },
     {'first_name': 'Max', 'last_name': 'Crebs', 'phone': '595-1254', 'note': 'very cool guy' },
 ]
+file_created
 
 class ContactsList:
     def __init__(self):
@@ -165,6 +166,8 @@ class ContactsList:
             for c in contact:
                 file.write(contact[c])
         file.close()
+        file_created = True
+
 
 contact_list = ContactsList()
 contact_list.menu()
