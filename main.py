@@ -167,7 +167,16 @@ class ContactsList:
             file.write('\n')
             file.write('\n')
         file.close()
-        file_created = True
+        cprint('======================', 'magenta')
+        cprint('Printed to root folder')
+        cprint('======================', 'magenta')
+        cprint('1) View file\n  2) Delete file\n  3) Menu', 'yellow')
+        user_input = int(input())
+        cprint('======================', 'magenta')
+        if user_input == 1:
+            import os
+            os.system('open contacts.txt')
+
         self.menu()
 
 
