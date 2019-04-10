@@ -163,7 +163,7 @@ class ContactsList:
         file = open('contacts.txt', 'w+')
         for contact in contacts:
             file.write(contact)
-        
+        file.close()
 
 contact_list = ContactsList()
 contact_list.menu()
