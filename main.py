@@ -160,6 +160,7 @@ class ContactsList:
 
     def print_contacts(self):
         global contacts
+        file = 
 
 contact_list = ContactsList()
 contact_list.menu()
