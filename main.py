@@ -5,7 +5,6 @@ contacts = [
     {'first_name': 'Mike', 'last_name': 'Coker', 'phone': '535-1234', 'note': 'very cool guy' },
     {'first_name': 'Max', 'last_name': 'Crebs', 'phone': '595-1254', 'note': 'very cool guy' },
 ]
-file_created = False
 
 class ContactsList:
     def __init__(self):
@@ -161,20 +160,15 @@ class ContactsList:
 
     def print_contacts(self):
         global contacts
-        global file_created
-        if file_created == False:
-            file = open('contacts.txt', 'w+')
-            for contact in contacts:
-                for c in contact:
-                    file.write(f'{contact[c]}\n')
-                file.write('\n')
-                file.write('\n')
-            file.close()
-            file_created = True
-            self.menu()
-        else:
-            
-
+        file = open('contacts.txt', 'w+')
+        for contact in contacts:
+            for c in contact:
+                file.write(f'{contact[c]}\n')
+            file.write('\n')
+            file.write('\n')
+        file.close()
+        file_created = True
+        self.menu()
 
 
 contact_list = ContactsList()
