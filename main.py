@@ -161,7 +161,8 @@ class ContactsList:
     def print_contacts(self):
         global contacts
         file = open('contacts.txt', 'w+')
-        
+        for contact in contacts:
+            file.write
 
 contact_list = ContactsList()
 contact_list.menu()
