@@ -168,28 +168,32 @@ class ContactsList:
         os.system('clear')
         global contacts
         file = open('contacts.txt', 'w+')
-        for contact in contacts:
-            for c in contact:
-                file.write(f'{contact[c]}\n')
-            file.write('\n')
-            file.write('\n')
-        file.close()
-        cprint('Printed to root folder')
-        cprint('====================', 'magenta')
-        cprint('1) View file\n2) Delete file\n3) Menu', 'yellow')
-        cprint('====================', 'magenta')
-        user_input = int(input())
-        cprint('====================', 'magenta')
-        if user_input == 1:
-            os.system('open contacts.txt')
-            self.menu()
-        elif user_input == 2:
-            os.remove('contacts.txt')
-            self.menu()
-        elif user_input == 3:
-            self.menu()
+        confirm = input('Print contacts?(y/n): ')
+        if confirm == 'y':
+            for contact in contacts:
+                for c in contact:
+                    file.write(f'{contact[c]}\n')
+                file.write('\n')
+                file.write('\n')
+            file.close()
+            cprint('Contacts printed.')
+            cprint('====================', 'magenta')
+            cprint('1) View file\n2) Delete file\n3) Menu', 'yellow')
+            cprint('====================', 'magenta')
+            user_input = int(input())
+            cprint('====================', 'magenta')
+            if user_input == 1:
+                os.system('open contacts.txt')
+                self.menu()
+            elif user_input == 2:
+                os.remove('contacts.txt')
+                self.menu()
+            elif user_input == 3:
+                self.menu()
+            else:
+                cprint('Invalid Input', 'red')
+                self.menu()
         else:
-            cprint('Invalid Input', 'red')
             self.menu()
 
 contact_list = ContactsList()
