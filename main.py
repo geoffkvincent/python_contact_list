@@ -5,6 +5,7 @@ contacts = [
     {'first_name': 'Mike', 'last_name': 'Coker', 'phone': '535-1234', 'note': 'very cool guy' },
     {'first_name': 'Max', 'last_name': 'Crebs', 'phone': '595-1254', 'note': 'very cool guy' },
 ]
+import time
 import os
 
 class ContactsList:
@@ -49,10 +50,13 @@ class ContactsList:
         for index, contact in enumerate(contacts, start=1):
             name = contact['first_name']
             print(f"{index}) {name}")
-        cprint(f'{index +1}) Back', 'red')
+        back_option = index +1
+        cprint(f'{back_option}) Back', 'yellow')
         cprint('=========================', 'magenta')
         user_input = int(input())
         cprint('=========================', 'magenta')
+        if user_input == back_option:
+            self.menu()
         for index, contact in enumerate(contacts, start=1):
             if index == user_input:
                 contact_select = contact
