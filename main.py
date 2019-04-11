@@ -49,6 +49,7 @@ class ContactsList:
         for index, contact in enumerate(contacts, start=1):
             name = contact['first_name']
             print(f"{index}) {name}")
+        cprint(f'{index +1}) Back', 'red')
         cprint('=========================', 'magenta')
         user_input = int(input())
         cprint('=========================', 'magenta')
