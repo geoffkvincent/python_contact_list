@@ -31,6 +31,7 @@ class ContactsList:
     def menu_switch(self, user_input):
         if user_input == 1:
             self.view()
+            time.sleep(1)
         elif user_input == 2:
             self.add_contact()
         elif user_input == 3:
