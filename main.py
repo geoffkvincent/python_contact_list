@@ -204,3 +204,5 @@ class ContactsList:
 
 contact_list = ContactsList()
 contact_list.menu()
+
+
