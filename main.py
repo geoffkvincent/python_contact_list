@@ -194,6 +194,7 @@ class ContactsList:
             elif user_input == 2:
                 os.remove('contacts.txt')
                 cprint('File has been deleted', 'red')
+                time.sleep(2)
                 self.menu()
             elif user_input == 3:
                 self.menu()
