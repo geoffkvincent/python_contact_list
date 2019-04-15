@@ -31,7 +31,6 @@ class ContactsList:
     def menu_switch(self, user_input):
         if user_input == 1:
             self.view()
-            time.sleep(1)
         elif user_input == 2:
             self.add_contact()
         elif user_input == 3:
@@ -184,7 +183,9 @@ class ContactsList:
                 file.write('\n')
                 file.write('\n')
             file.close()
-            cprint('Contacts printed.')
+            time.sleep(2)
+            cprint('====================', 'magenta')
+            cprint('Contacts printed.', 'yellow')
             cprint('====================', 'magenta')
             cprint('1) View file\n2) Delete file\n3) Menu', 'yellow')
             cprint('====================', 'magenta')
