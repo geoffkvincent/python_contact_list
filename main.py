@@ -38,6 +38,8 @@ class ContactsList:
             self.print_contacts()
         elif user_input == 4:
             cprint('Goodbye', 'yellow')
+            time.sleep(2)
+            os.system('clear')
             exit()
         else:
           cprint('Invalid Input', 'red')
